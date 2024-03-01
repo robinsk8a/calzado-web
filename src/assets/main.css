@@ -16,7 +16,7 @@ li {
 }
 :root {
     --header-height: 2rem;
-    --max-width: 90%;
+    --max-width: 80%;
     --sans:  "Quattrocento Sans", sans-serif;
     --serif: "Cardo", serif;
     --red-origen: #A80D0D;
