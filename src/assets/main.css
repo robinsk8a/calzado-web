@@ -1,0 +1,42 @@
+/*  RESET  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(110, 91, 82), rgb(129, 112, 79)), url("../components/img/background.jpg") ;
+    background-blend-mode: screen;
+    font-size: 130%;
+}
+
+li {
+    list-style: none;
+}
+:root {
+    --header-height: 2rem;
+    --max-width: 90%;
+    --sans:  "Quattrocento Sans", sans-serif;
+    --serif: "Cardo", serif;
+    --red-origen: #A80D0D;
+    --orange-origen: #F29B4E;
+    --white-origen: aliceblue;
+}
+
+
+img {
+    height: 10rem;
+}
+button {
+    background: none;
+    border: none;
+}
+
+.sans {
+    font-family: "Quattrocento Sans", sans-serif;
+}
+
+.serif {
+    font-family: "Cardo", serif;
+}
