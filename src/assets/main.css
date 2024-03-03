@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgb(110, 91, 82), rgb(129, 112, 79)), url("../components/img/background.jpg") ;
+    background: linear-gradient(to bottom, rgb(110, 91, 82), rgb(129, 112, 79)), url("/src/assets/img/background.jpg") ;
     background-blend-mode: screen;
     font-size: 130%;
 }

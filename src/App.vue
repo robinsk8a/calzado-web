@@ -1,12 +1,13 @@
 <script setup>
 import "./assets/main.css";
+import Hero  from "./components/home/Hero.vue";
 </script>
 
 <template>
   <header class="header">
     <div class="header-wrapper">
       <div class="branding">
-        <img src="./components/img/Isologo001.jpg" alt="">
+        <img src="/src/assets/img/Isologo001.jpg" alt="">
         <div class="brand">
           <h3 >Origen</h3>
           <p>BY LONGOS</p>
@@ -18,24 +19,20 @@ import "./assets/main.css";
       </nav> 
     </div>
   </header>
-  <section class="hero">
-    <img src="./components/img/longos02.jpg" alt="" class="hero-img">
-    <div class="hero-section">
-      <h1 class="h-title">Calzado Longos</h1>
-      <p class="h-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eaque earum laboriosam quidem, similique odit!</p>
-      <button class="h-c2a">Comprar en Linea</button>
-    </div>
-  </section>
+
+<!-- Hero Section -->
+  <Hero />
+
   <section class="store-section">
     <div class="products">
       <div class="prod-display">
         <div class="display__wrap">
-          <img src="./components/img/longos01.jpg" alt="" class="display__img">
+          <img src="/src/assets/img/longos01.jpg" alt="" class="display__img">
         </div>
       </div>
       <div class="prod-card">
         <div class="card__wrap">
-          <img src="./components/img/longos01.jpg" alt="" class="card__img">
+          <img src="/src/assets/img/longos01.jpg" alt="" class="card__img">
           <div class="card__content">
 
             <div class="c-content__likes">
@@ -63,18 +60,18 @@ import "./assets/main.css";
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div id="copyright" align="center"><small>&copy; 2024 - origenbylongos.com</small></div>
-      <ul class="footer-list">
-        <li>Outlet y Descuentos</li>
-        <li>Comprar en Pereira</li>
-        <li>Pedidos por mayor</li>
-        <li>Comprar en línea</li>
-        <li>Novedades</li>
-        <li>Contacto</li>
-      </ul>
-    </footer>
   </section>
+  <footer class="footer">
+    <div id="copyright" align="center"><small>&copy; 2024 - origenbylongos.com</small></div>
+    <ul class="footer-list">
+      <li>Outlet y Descuentos</li>
+      <li>Comprar en Pereira</li>
+      <li>Pedidos por mayor</li>
+      <li>Comprar en línea</li>
+      <li>Novedades</li>
+      <li>Contacto</li>
+    </ul>
+  </footer>
 </template>
 
 <style>
@@ -130,55 +127,7 @@ p {
   font-weight: 600;
   font-family: var(--sans);
 }
-.hero{
-  max-width: var(--max-width) ;
-  height: calc(80svh - 4rem);
-  display: flex;
-  margin-inline: auto;
-  margin-block: 10svh;
-  background: rgb(228, 230, 231);
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0 0.4rem 2rem 0.1rem rgba(0, 0, 0, 0.3);
-}
-.hero-img{
-  height: 110%;
-  mask-image: linear-gradient(to left, transparent 10%, black 50%);
-  mask-mode: alpha;
-  width: 45%;
-  object-fit: cover;
-}
 
-.hero-section{
-  max-width: 45rem;
-  display: flex;
-  flex-direction: column;
-  padding: 10svh 2rem;
-  height: 100%;
-  width: 100%;
-  flex: 1;
-  margin-inline: auto;
-}
-.h-title{
-  color: var(--red-origen);
-  margin-bottom: 4svh;
-  font-size: 2.4rem;
-}
-.h-text{
-  padding-left: 1rem;
-}
-.h-c2a{
-  margin-top: auto;
-  margin-inline: auto;
-  margin-bottom: 2rem;
-  background-color: var(--red-origen);
-  padding: 0.8rem 4rem;
-  font-size: 2rem;
-  border-radius: 1.4rem;
-  color: aliceblue;
-  box-shadow: 0 0.1rem 0.5rem 0rem rgba(0, 0, 0, 0.6);
-  
-}
 .store-section{
   
 }
@@ -274,6 +223,7 @@ margin-top: auto;
   border-radius: 1rem;
   font-size: 70%;
   font-weight: 600;
+  color: rgb(83, 86, 88);
 }
 .footer {
   background-color: rgb(104, 103, 103);
@@ -291,7 +241,10 @@ margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  row-gap: 0.4rem;
+  column-gap: 2rem;
   border-left: solid 0.2rem ;
+  height: 6rem;
 }
-</style>
+</style>./components/Hero.vue./components/home/Hero.vue
