@@ -4,27 +4,28 @@ import Hero  from "@/components/home/Hero.vue";
 import HomeStore from "@/components/home/HomeStore.vue";
 import { ref , onMounted } from "vue";
 
+
 const productsData = ref(null);
 
 onMounted(async () => {
   try {
-    const response = await fetch('@/data/products.json');
+    const response = await fetch('/src/data/products.json');
     productsData.value = await response.json();
   } catch (error) {
     console.error('Error fetching JSON data:', error);
   }
 });
 
-const header = ref(null);
+// const header = ref(null);
 
-const handleScroll = () => {
-  const scrollPosition = window.scrollY;
-  console.log(scrollPosition)
-}
+// const handleScroll = () => {
+//   const scrollPosition = window.scrollY;
+//   console.log(scrollPosition)
+// }
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+// onMounted(() => {
+//   window.addEventListener('scroll', handleScroll)
+// })
 
 </script>
 
