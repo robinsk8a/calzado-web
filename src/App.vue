@@ -32,7 +32,7 @@ onMounted(() => {
   <header class="header" ref="header">
     <div class="header-wrapper">
       <div class="branding">
-        <img src="/src/assets/img/Isologo001.jpg" alt="">
+        <img src="@/assets/img/Isologo001.jpg" alt="">
         <div class="brand">
           <h3 >Origen</h3>
           <p>BY LONGOS</p>
