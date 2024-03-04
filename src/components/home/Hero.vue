@@ -16,7 +16,7 @@
 <style>
 .hero {
   max-width: var(--max-width);
-  height: calc(80svh - 4rem);
+  height: calc(80svh - var(--header-height));
   display: flex;
   margin-inline: auto;
   margin-block: 10svh;
@@ -24,6 +24,7 @@
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 0.4rem 2rem 0.1rem rgba(0, 0, 0, 0.3);
+  scroll-snap-align: end;
 }
 
 .hero-img {

@@ -15,7 +15,8 @@ li {
     list-style: none;
 }
 :root {
-    --header-height: 2rem;
+    --header-height: 4rem;
+    --prod-display: 15svh;
     --max-width: 80%;
     --sans:  "Quattrocento Sans", sans-serif;
     --serif: "Cardo", serif;
@@ -31,6 +32,10 @@ img {
 button {
     background: none;
     border: none;
+}
+
+html {
+    scroll-snap-type: y mandatory;
 }
 
 .sans {
