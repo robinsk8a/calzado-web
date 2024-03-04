@@ -2,18 +2,27 @@
 import "./assets/main.css";
 import Hero  from "@/components/home/Hero.vue";
 import HomeStore from "@/components/home/HomeStore.vue";
-import { ref , onMounted } from "vue";
+import { ref , onMounted, onBeforeMount } from "vue";
 
 
-const productsData = ref(null);
+const productsData = ref([]);
+const error = ref(null);
+const loading = ref(false);
 
-onMounted(async () => {
+async function fetchProducts() {
+  loading.value = true;
   try {
-    const response = await fetch('/src/data/products.json');
-    productsData.value = await response.json();
-  } catch (error) {
-    console.error('Error fetching JSON data:', error);
+    const response = await fetch('src/data/products.json');
+    productsData.value = [...await response.json()]; 
+  } catch (err) {
+    error.value = err;
+  } finally {
+    loading.value = false;
   }
+}
+
+onBeforeMount(async() => {
+  await fetchProducts();
 });
 
 // const header = ref(null);
@@ -50,7 +59,17 @@ onMounted(async () => {
   <Hero />
 
 <!-- Main store section -->
-  <HomeStore :products="productsData" />
+  <div v-if="loading">
+    Loading...
+  </div>
+
+  <div v-else-if="error">
+    Error fetching data
+  </div>
+
+  <div v-else>
+    <HomeStore :products="productsData" />
+  </div>
 
   <footer class="footer">
     <div id="copyright" align="center"><small>&copy; 2024 - origenbylongos.com</small></div>
