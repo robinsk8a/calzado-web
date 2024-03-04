@@ -8,7 +8,7 @@ const productsData = ref(null);
 
 onMounted(async () => {
   try {
-    const response = await fetch('/src/data/products.json');
+    const response = await fetch('@/data/products.json');
     productsData.value = await response.json();
   } catch (error) {
     console.error('Error fetching JSON data:', error);
